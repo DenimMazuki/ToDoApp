@@ -31,7 +31,10 @@ func ==(lhs: ToDoItem, rhs: ToDoItem) -> Bool {
     if (lhs.itemDescription != rhs.itemDescription) {
         return false
     }
-
+    
+    if (lhs.title != rhs.title) {
+        return false
+    }
     
     return true
 }
