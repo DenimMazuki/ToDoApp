@@ -124,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				D650215A1E67B7B600D47D8F /* Model */,
+				D64134051E6F8D0600F012A2 /* View */,
 				D61CF63D1E68FD71006915FE /* Controller */,
 				D6406F1C1E665A4200805678 /* Main.storyboard */,
 				D6406F181E665A4200805678 /* AppDelegate.swift */,
@@ -144,13 +145,20 @@
 			path = ToDoAppTests;
 			sourceTree = "<group>";
 		};
+		D64134051E6F8D0600F012A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D64134031E6F89AF00F012A2 /* ItemCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		D650215A1E67B7B600D47D8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				D6406F3A1E665D1F00805678 /* ToDoItem.swift */,
 				D65021561E67B61D00D47D8F /* Location.swift */,
 				D650215D1E67BAA100D47D8F /* ItemManager.swift */,
-				D64134031E6F89AF00F012A2 /* ItemCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
