@@ -16,10 +16,12 @@
 		D6406F231E665A4200805678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6406F211E665A4200805678 /* LaunchScreen.storyboard */; };
 		D6406F391E665CC600805678 /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6406F381E665CC600805678 /* ToDoItemTests.swift */; };
 		D6406F3B1E665D1F00805678 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6406F3A1E665D1F00805678 /* ToDoItem.swift */; };
+		D64134041E6F89AF00F012A2 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64134031E6F89AF00F012A2 /* ItemCell.swift */; };
 		D65021571E67B61D00D47D8F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65021561E67B61D00D47D8F /* Location.swift */; };
 		D65021591E67B77200D47D8F /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65021581E67B77200D47D8F /* LocationTests.swift */; };
 		D650215C1E67BA4900D47D8F /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650215B1E67BA4900D47D8F /* ItemManagerTests.swift */; };
 		D650215E1E67BAA100D47D8F /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650215D1E67BAA100D47D8F /* ItemManager.swift */; };
+		D6D9B5791E6F7BE600820345 /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +48,12 @@
 		D6406F2F1E665A4200805678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6406F381E665CC600805678 /* ToDoItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItemTests.swift; sourceTree = "<group>"; };
 		D6406F3A1E665D1F00805678 /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		D64134031E6F89AF00F012A2 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		D65021561E67B61D00D47D8F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D65021581E67B77200D47D8F /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		D650215B1E67BA4900D47D8F /* ItemManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
 		D650215D1E67BAA100D47D8F /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
+		D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				D61CF6371E68FCFC006915FE /* ItemListViewControllerTest.swift */,
+				D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				D6406F3A1E665D1F00805678 /* ToDoItem.swift */,
 				D65021561E67B61D00D47D8F /* Location.swift */,
 				D650215D1E67BAA100D47D8F /* ItemManager.swift */,
+				D64134031E6F89AF00F012A2 /* ItemCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 				D61CF63F1E69011B006915FE /* ItemListDataProvider.swift in Sources */,
 				D6406F191E665A4200805678 /* AppDelegate.swift in Sources */,
 				D65021571E67B61D00D47D8F /* Location.swift in Sources */,
+				D64134041E6F89AF00F012A2 /* ItemCell.swift in Sources */,
 				D6406F3B1E665D1F00805678 /* ToDoItem.swift in Sources */,
 				D61CF63C1E68FD6B006915FE /* ItemListViewController.swift in Sources */,
 			);
@@ -266,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D9B5791E6F7BE600820345 /* ItemListDataProviderTests.swift in Sources */,
 				D650215C1E67BA4900D47D8F /* ItemManagerTests.swift in Sources */,
 				D65021591E67B77200D47D8F /* LocationTests.swift in Sources */,
 				D61CF6381E68FCFC006915FE /* ItemListViewControllerTest.swift in Sources */,
