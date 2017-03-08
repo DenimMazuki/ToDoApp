@@ -21,6 +21,7 @@
 		D65021591E67B77200D47D8F /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65021581E67B77200D47D8F /* LocationTests.swift */; };
 		D650215C1E67BA4900D47D8F /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650215B1E67BA4900D47D8F /* ItemManagerTests.swift */; };
 		D650215E1E67BAA100D47D8F /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650215D1E67BAA100D47D8F /* ItemManager.swift */; };
+		D6D1EED81E6F989500F008BE /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D1EED71E6F989500F008BE /* ItemCellTests.swift */; };
 		D6D9B5791E6F7BE600820345 /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		D65021581E67B77200D47D8F /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		D650215B1E67BA4900D47D8F /* ItemManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
 		D650215D1E67BAA100D47D8F /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
+		D6D1EED71E6F989500F008BE /* ItemCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellTests.swift; sourceTree = "<group>"; };
 		D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				D61CF6371E68FCFC006915FE /* ItemListViewControllerTest.swift */,
+				D6D1EED71E6F989500F008BE /* ItemCellTests.swift */,
 				D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */,
 			);
 			name = Controller;
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D1EED81E6F989500F008BE /* ItemCellTests.swift in Sources */,
 				D6D9B5791E6F7BE600820345 /* ItemListDataProviderTests.swift in Sources */,
 				D650215C1E67BA4900D47D8F /* ItemManagerTests.swift in Sources */,
 				D65021591E67B77200D47D8F /* LocationTests.swift in Sources */,
