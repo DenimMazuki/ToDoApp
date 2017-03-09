@@ -11,8 +11,23 @@ import XCTest
 
 class ItemCellTests: XCTestCase {
     
+    var tableView: UITableView!
+    let dataSource = FakeDataSource()
+    var cell: ItemCell!
+    
     override func setUp() {
         super.setUp()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ItemListViewController") as! ItemListViewController
+        
+        _ = controller.view
+        
+        tableView = controller.tableView
+        tableView?.dataSource = dataSource
+        
+        cell = tableView?.dequeueReusableCell(withIdentifier: "ItemCell", for: IndexPath(row: 0, section: 0)) as! ItemCell
+
     }
     
     override func tearDown() {
@@ -20,19 +35,29 @@ class ItemCellTests: XCTestCase {
     }
     
     func test_HasNameLabel() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "ItemListViewController") as! ItemListViewController
-        
-        _ = controller.view
-        
-        let tableView = controller.tableView
-        let dataSource = FakeDataSource()
-        
-        tableView?.dataSource = dataSource
-        
-        let cell = tableView?.dequeueReusableCell(withIdentifier: "ItemCell", for: IndexPath(row: 0, section: 0)) as! ItemCell
-        
+
         XCTAssertNotNil(cell.titleLabel)
+    }
+    
+    func test_HasLocationLabel() {
+        
+        XCTAssertNotNil(cell.locationLabel)
+    }
+    
+    func test_HasDateLabel() {
+        
+        XCTAssertNotNil(cell.dateLabel)
+    }
+    
+    func test_ConfigCell_SetsLabelText() {
+        let location = Location(name: "Bar")
+        let item = ToDoItem(title: "Foo", itemDescription: nil, timestamp: 1456150025, location: location)
+        
+        cell.configCell(with: item)
+        
+        XCTAssertEqual(cell.titleLabel.text, "Foo")
+        XCTAssertEqual(cell.locationLabel.text, "Bar")
+        XCTAssertEqual(cell.dateLabel.text, "02/22/2016")
     }
     
 }
