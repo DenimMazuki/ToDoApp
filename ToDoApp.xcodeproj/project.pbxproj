@@ -21,6 +21,9 @@
 		D65021591E67B77200D47D8F /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65021581E67B77200D47D8F /* LocationTests.swift */; };
 		D650215C1E67BA4900D47D8F /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650215B1E67BA4900D47D8F /* ItemManagerTests.swift */; };
 		D650215E1E67BAA100D47D8F /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650215D1E67BAA100D47D8F /* ItemManager.swift */; };
+		D68600001E74E28D007CDE7F /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686FFFF1E74E28D007CDE7F /* APIClientTests.swift */; };
+		D68600021E74E2C4007CDE7F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68600011E74E2C4007CDE7F /* APIClient.swift */; };
+		D68600041E74E82E007CDE7F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68600031E74E82E007CDE7F /* Token.swift */; };
 		D686FFF81E74CC90007CDE7F /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686FFF71E74CC90007CDE7F /* DetailViewControllerTests.swift */; };
 		D686FFFA1E74CCE9007CDE7F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686FFF91E74CCE9007CDE7F /* DetailViewController.swift */; };
 		D686FFFC1E74D3F3007CDE7F /* InputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686FFFB1E74D3F3007CDE7F /* InputViewControllerTests.swift */; };
@@ -58,10 +61,13 @@
 		D65021581E67B77200D47D8F /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		D650215B1E67BA4900D47D8F /* ItemManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
 		D650215D1E67BAA100D47D8F /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
+		D68600011E74E2C4007CDE7F /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		D68600031E74E82E007CDE7F /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		D686FFF71E74CC90007CDE7F /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
 		D686FFF91E74CCE9007CDE7F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D686FFFB1E74D3F3007CDE7F /* InputViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewControllerTests.swift; sourceTree = "<group>"; };
 		D686FFFD1E74D420007CDE7F /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		D686FFFF1E74E28D007CDE7F /* APIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		D6D1EED71E6F989500F008BE /* ItemCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellTests.swift; sourceTree = "<group>"; };
 		D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +98,7 @@
 				D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */,
 				D686FFF71E74CC90007CDE7F /* DetailViewControllerTests.swift */,
 				D686FFFB1E74D3F3007CDE7F /* InputViewControllerTests.swift */,
+				D686FFFF1E74E28D007CDE7F /* APIClientTests.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 				D686FFF91E74CCE9007CDE7F /* DetailViewController.swift */,
 				D61CF63E1E69011B006915FE /* ItemListDataProvider.swift */,
 				D686FFFD1E74D420007CDE7F /* InputViewController.swift */,
+				D68600011E74E2C4007CDE7F /* APIClient.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 				D6406F3A1E665D1F00805678 /* ToDoItem.swift */,
 				D65021561E67B61D00D47D8F /* Location.swift */,
 				D650215D1E67BAA100D47D8F /* ItemManager.swift */,
+				D68600031E74E82E007CDE7F /* Token.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -285,9 +294,11 @@
 				D686FFFE1E74D420007CDE7F /* InputViewController.swift in Sources */,
 				D650215E1E67BAA100D47D8F /* ItemManager.swift in Sources */,
 				D61CF63F1E69011B006915FE /* ItemListDataProvider.swift in Sources */,
+				D68600021E74E2C4007CDE7F /* APIClient.swift in Sources */,
 				D6406F191E665A4200805678 /* AppDelegate.swift in Sources */,
 				D65021571E67B61D00D47D8F /* Location.swift in Sources */,
 				D64134041E6F89AF00F012A2 /* ItemCell.swift in Sources */,
+				D68600041E74E82E007CDE7F /* Token.swift in Sources */,
 				D6406F3B1E665D1F00805678 /* ToDoItem.swift in Sources */,
 				D61CF63C1E68FD6B006915FE /* ItemListViewController.swift in Sources */,
 				D686FFFA1E74CCE9007CDE7F /* DetailViewController.swift in Sources */,
@@ -304,6 +315,7 @@
 				D686FFFC1E74D3F3007CDE7F /* InputViewControllerTests.swift in Sources */,
 				D65021591E67B77200D47D8F /* LocationTests.swift in Sources */,
 				D686FFF81E74CC90007CDE7F /* DetailViewControllerTests.swift in Sources */,
+				D68600001E74E28D007CDE7F /* APIClientTests.swift in Sources */,
 				D61CF6381E68FCFC006915FE /* ItemListViewControllerTest.swift in Sources */,
 				D6406F391E665CC600805678 /* ToDoItemTests.swift in Sources */,
 			);
