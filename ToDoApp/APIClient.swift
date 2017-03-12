@@ -13,7 +13,17 @@ class APIClient {
     
     func loginUser(withName username: String, password: String, completion: @escaping (Token?, Error?) -> Void) {
         
-        let query = "username=\(username)&password=\(password)"
+        let allowedCharacters = CharacterSet(charactersIn: "/%&=?$#+-~@<>|\\*,.()[]{}^!").inverted
+        
+        guard let expectedUsername = username.addingPercentEncoding(withAllowedCharacters: allowedCharacters) else {
+            fatalError()
+        }
+        
+        guard let expectedPassword = password.addingPercentEncoding(withAllowedCharacters: allowedCharacters) else {
+            fatalError()
+        }
+        
+        let query = "username=\(expectedUsername)&password=\(expectedPassword)"
         
         guard let url = URL(string: "https://awesometodos.com/login?\(query)") else {
             fatalError()

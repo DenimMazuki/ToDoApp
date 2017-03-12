@@ -33,7 +33,7 @@ class APIClientTests: XCTestCase {
             (token: Token?, error: Error?) in
         }
         
-        sut.loginUser(withName: "dasdom", password: "1234", completion: completion)
+        sut.loginUser(withName: "dasdöm", password: "%&34", completion: completion)
         
         guard let url = mockURLSession.url else {
             XCTFail()
@@ -44,7 +44,19 @@ class APIClientTests: XCTestCase {
         
         XCTAssertEqual(urlComponents?.host, "awesometodos.com")
         XCTAssertEqual(urlComponents?.path, "/login")
-        XCTAssertEqual(urlComponents?.query, "username=dasdom&password=1234")
+        
+        let allowedCharacters = CharacterSet(charactersIn: "/%&=?$#+-~@<>|\\*,.()[]{}^!").inverted
+        
+        guard let expectedUsername = "dasdöm".addingPercentEncoding(withAllowedCharacters: allowedCharacters) else {
+            fatalError()
+        }
+        
+        guard let expectedPassword = "%&34".addingPercentEncoding(withAllowedCharacters: allowedCharacters) else {
+            fatalError()
+        }
+        
+        XCTAssertEqual(urlComponents?.percentEncodedQuery, "username=\(expectedUsername)&password=\(expectedPassword)")
+        
     }
     
 }
