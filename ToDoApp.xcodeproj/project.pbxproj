@@ -23,6 +23,8 @@
 		D650215E1E67BAA100D47D8F /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650215D1E67BAA100D47D8F /* ItemManager.swift */; };
 		D686FFF81E74CC90007CDE7F /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686FFF71E74CC90007CDE7F /* DetailViewControllerTests.swift */; };
 		D686FFFA1E74CCE9007CDE7F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686FFF91E74CCE9007CDE7F /* DetailViewController.swift */; };
+		D686FFFC1E74D3F3007CDE7F /* InputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686FFFB1E74D3F3007CDE7F /* InputViewControllerTests.swift */; };
+		D686FFFE1E74D420007CDE7F /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686FFFD1E74D420007CDE7F /* InputViewController.swift */; };
 		D6D1EED81E6F989500F008BE /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D1EED71E6F989500F008BE /* ItemCellTests.swift */; };
 		D6D9B5791E6F7BE600820345 /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		D650215D1E67BAA100D47D8F /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		D686FFF71E74CC90007CDE7F /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
 		D686FFF91E74CCE9007CDE7F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D686FFFB1E74D3F3007CDE7F /* InputViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewControllerTests.swift; sourceTree = "<group>"; };
+		D686FFFD1E74D420007CDE7F /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		D6D1EED71E6F989500F008BE /* ItemCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellTests.swift; sourceTree = "<group>"; };
 		D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +91,7 @@
 				D6D1EED71E6F989500F008BE /* ItemCellTests.swift */,
 				D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */,
 				D686FFF71E74CC90007CDE7F /* DetailViewControllerTests.swift */,
+				D686FFFB1E74D3F3007CDE7F /* InputViewControllerTests.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 				D61CF63B1E68FD6B006915FE /* ItemListViewController.swift */,
 				D686FFF91E74CCE9007CDE7F /* DetailViewController.swift */,
 				D61CF63E1E69011B006915FE /* ItemListDataProvider.swift */,
+				D686FFFD1E74D420007CDE7F /* InputViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D686FFFE1E74D420007CDE7F /* InputViewController.swift in Sources */,
 				D650215E1E67BAA100D47D8F /* ItemManager.swift in Sources */,
 				D61CF63F1E69011B006915FE /* ItemListDataProvider.swift in Sources */,
 				D6406F191E665A4200805678 /* AppDelegate.swift in Sources */,
@@ -294,6 +301,7 @@
 				D6D1EED81E6F989500F008BE /* ItemCellTests.swift in Sources */,
 				D6D9B5791E6F7BE600820345 /* ItemListDataProviderTests.swift in Sources */,
 				D650215C1E67BA4900D47D8F /* ItemManagerTests.swift in Sources */,
+				D686FFFC1E74D3F3007CDE7F /* InputViewControllerTests.swift in Sources */,
 				D65021591E67B77200D47D8F /* LocationTests.swift in Sources */,
 				D686FFF81E74CC90007CDE7F /* DetailViewControllerTests.swift in Sources */,
 				D61CF6381E68FCFC006915FE /* ItemListViewControllerTest.swift in Sources */,

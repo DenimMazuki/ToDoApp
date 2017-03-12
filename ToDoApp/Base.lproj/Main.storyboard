@@ -141,5 +141,35 @@
             </objects>
             <point key="canvasLocation" x="692" y="35.532233883058474"/>
         </scene>
+        <!--InputViewController-->
+        <scene sceneID="PMt-sF-EOA">
+            <objects>
+                <viewController storyboardIdentifier="InputViewController" title="InputViewController" id="NlS-GO-tOC" customClass="InputViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xQb-IG-yfn"/>
+                        <viewControllerLayoutGuide type="bottom" id="C1G-2m-p3d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lZc-Ld-6vL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOv-br-tjl">
+                                <rect key="frame" x="92" y="183" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleTextField" destination="GOv-br-tjl" id="R7a-Wq-jZP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RBW-mH-iyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1378" y="38"/>
+        </scene>
     </scenes>
 </document>
