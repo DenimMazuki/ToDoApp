@@ -21,6 +21,8 @@
 		D65021591E67B77200D47D8F /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65021581E67B77200D47D8F /* LocationTests.swift */; };
 		D650215C1E67BA4900D47D8F /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650215B1E67BA4900D47D8F /* ItemManagerTests.swift */; };
 		D650215E1E67BAA100D47D8F /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650215D1E67BAA100D47D8F /* ItemManager.swift */; };
+		D686FFF81E74CC90007CDE7F /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686FFF71E74CC90007CDE7F /* DetailViewControllerTests.swift */; };
+		D686FFFA1E74CCE9007CDE7F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686FFF91E74CCE9007CDE7F /* DetailViewController.swift */; };
 		D6D1EED81E6F989500F008BE /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D1EED71E6F989500F008BE /* ItemCellTests.swift */; };
 		D6D9B5791E6F7BE600820345 /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		D65021581E67B77200D47D8F /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		D650215B1E67BA4900D47D8F /* ItemManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
 		D650215D1E67BAA100D47D8F /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
+		D686FFF71E74CC90007CDE7F /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
+		D686FFF91E74CCE9007CDE7F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D6D1EED71E6F989500F008BE /* ItemCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellTests.swift; sourceTree = "<group>"; };
 		D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +86,7 @@
 				D61CF6371E68FCFC006915FE /* ItemListViewControllerTest.swift */,
 				D6D1EED71E6F989500F008BE /* ItemCellTests.swift */,
 				D6D9B5781E6F7BE600820345 /* ItemListDataProviderTests.swift */,
+				D686FFF71E74CC90007CDE7F /* DetailViewControllerTests.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				D61CF63B1E68FD6B006915FE /* ItemListViewController.swift */,
+				D686FFF91E74CCE9007CDE7F /* DetailViewController.swift */,
 				D61CF63E1E69011B006915FE /* ItemListDataProvider.swift */,
 			);
 			name = Controller;
@@ -277,6 +283,7 @@
 				D64134041E6F89AF00F012A2 /* ItemCell.swift in Sources */,
 				D6406F3B1E665D1F00805678 /* ToDoItem.swift in Sources */,
 				D61CF63C1E68FD6B006915FE /* ItemListViewController.swift in Sources */,
+				D686FFFA1E74CCE9007CDE7F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +295,7 @@
 				D6D9B5791E6F7BE600820345 /* ItemListDataProviderTests.swift in Sources */,
 				D650215C1E67BA4900D47D8F /* ItemManagerTests.swift in Sources */,
 				D65021591E67B77200D47D8F /* LocationTests.swift in Sources */,
+				D686FFF81E74CC90007CDE7F /* DetailViewControllerTests.swift in Sources */,
 				D61CF6381E68FCFC006915FE /* ItemListViewControllerTest.swift in Sources */,
 				D6406F391E665CC600805678 /* ToDoItemTests.swift in Sources */,
 			);
