@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import ToDoApp
+import CoreLocation
 
 class InputViewControllerTests: XCTestCase {
     
@@ -25,8 +26,52 @@ class InputViewControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_HasTitleTextField() {
+    func test_HasTextFields() {
         XCTAssertNotNil(sut.titleTextField)
+        XCTAssertNotNil(sut.dateTextField)
+        XCTAssertNotNil(sut.addressTextField)
+        XCTAssertNotNil(sut.descriptionTextField)
     }
     
+    func test_HasButtons() {
+        XCTAssertNotNil(sut.saveButton)
+        XCTAssertNotNil(sut.cancelButton)
+    }
+    
+    
 }
+
+extension InputViewControllerTests {
+    class MockGeoCoder: CLGeocoder {
+        
+        var completionHandler: CLGeocodeCompletionHandler?
+        
+        override func geocodeAddressString(_ addressString: String, completionHandler: @escaping CLGeocodeCompletionHandler) {
+            
+            self.completionHandler = completionHandler
+        }
+    }
+    
+    class MockPlacemark: CLPlacemark {
+        
+        var mockCoordinate: CLLocationCoordinate2D?
+        
+        override var location: CLLocation? {
+            guard let coordinate = mockCoordinate else {
+                return CLLocation()
+            }
+            
+            return CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
