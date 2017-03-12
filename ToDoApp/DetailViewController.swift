@@ -48,4 +48,10 @@ class DetailViewController: UIViewController {
         
     }
     
+    func checkItem() {
+        if let itemInfo = itemInfo {
+            itemInfo.0.checkItem(at: itemInfo.1)
+        }
+    }
+    
 }
