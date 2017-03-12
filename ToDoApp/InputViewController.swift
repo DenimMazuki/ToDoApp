@@ -27,7 +27,7 @@ class InputViewController: UIViewController {
         return dateFormatter
     }()
     
-    func save() {
+    @IBAction func save() {
         guard let titleString = titleTextField.text, titleString.characters.count > 0 else {
             return
         }
@@ -50,7 +50,7 @@ class InputViewController: UIViewController {
                     
                     let item = ToDoItem(title: titleString, itemDescription: descriptionString, timestamp: date?.timeIntervalSince1970, location: Location(name: locationName, coordinate: placeMark?.location?.coordinate))
                     
-                    self.itemManager?.add(item) 
+                    self.itemManager?.add(item)
                 }
                 
             }
