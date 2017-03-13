@@ -25,7 +25,7 @@ class APIClientTests: XCTestCase {
         
         let sut = APIClient()
         
-        let mockURLSession = MockURLSession()
+        let mockURLSession = MockURLSession(data: nil, urlResponse: nil, error: nil)
         
         sut.session = mockURLSession
         
@@ -62,11 +62,18 @@ extension APIClientTests {
     
     class MockURLSession: SessionProtocol {
         var url: URL?
+        private let dataTask: MockTask
+        
+        init (data: Data?, urlResponse: URLResponse?, error: Error?) {
+            dataTask = MockTask(data: data, urlResponse: urlResponse, error: error)
+        }
         
         func dataTask(with url: URL, completionHandler: @escaping(Data?, URLResponse?, Error?)-> Void) -> URLSessionDataTask {
             
             self.url = url
-            return URLSession.shared.dataTask(with: url)
+            dataTask.completionHandler = completionHandler
+            
+            return dataTask
         }
         
     }
