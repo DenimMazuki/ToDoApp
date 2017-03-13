@@ -17,4 +17,13 @@ class ItemListViewController: UIViewController {
     override func viewDidLoad() {
         tableView.dataSource = dataProvider
     }
+    
+    @IBAction func addItem(_ sender: UIBarButtonItem) {
+        
+        if let nextViewController = storyboard?.instantiateViewController(withIdentifier: "InputViewController") as? InputViewController {
+            present(nextViewController, animated: true, completion: nil)
+        }
+        
+    }
+    
 }
