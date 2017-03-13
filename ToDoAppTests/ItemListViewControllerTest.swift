@@ -87,5 +87,8 @@ class ItemListViewControllerTest: XCTestCase {
         XCTAssertTrue(sut.itemManager === inputViewController.itemManager)
     }
     
+    func test_ViewDidLoad_SetsItemManagerToDataProvider() {
+        XCTAssertTrue(sut.itemManager === sut.dataProvider.itemManager)
+    }
     
 }
