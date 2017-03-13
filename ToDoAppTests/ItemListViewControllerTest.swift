@@ -11,6 +11,7 @@ import XCTest
 
 class ItemListViewControllerTest: XCTestCase {
     var sut: ItemListViewController!
+    var addButton: UIBarButtonItem?
     
     override func setUp() {
         super.setUp()
@@ -20,6 +21,10 @@ class ItemListViewControllerTest: XCTestCase {
         sut = viewController as! ItemListViewController
         
         _ = sut.view
+        
+        addButton = sut.navigationItem.rightBarButtonItem
+        
+        UIApplication.shared.keyWindow?.rootViewController = sut
     }
     
     override func tearDown() {
@@ -38,7 +43,7 @@ class ItemListViewControllerTest: XCTestCase {
     }
     
     func test_ItemListViewController_HasAddBarButtonWithSelfAsTarget() {
-        let target = sut.navigationItem.rightBarButtonItem?.target
+        let target = addButton?.target
         XCTAssertEqual(target as? UIViewController, sut)
     }
     
@@ -46,16 +51,12 @@ class ItemListViewControllerTest: XCTestCase {
         
         XCTAssertNil(sut.presentedViewController)
         
-        guard let addButton = sut.navigationItem.rightBarButtonItem else {
-            XCTFail()
-            return
-        }
-        guard let action = addButton.action else {
-            XCTFail()
-            return
-        }
+        XCTAssertNotNil(addButton)
         
-        UIApplication.shared.keyWindow?.rootViewController = sut
+        guard let action = addButton?.action else {
+            XCTFail()
+            return
+        }
         
         sut.performSelector(onMainThread: action, with: addButton, waitUntilDone: true)
         
@@ -63,20 +64,19 @@ class ItemListViewControllerTest: XCTestCase {
         XCTAssertTrue(sut.presentedViewController is InputViewController)
         
         let inputViewController = sut.presentedViewController as! InputViewController
+        
         XCTAssertNotNil(inputViewController.titleTextField)
     }
     
     func testItemListVC_SharesItemManagerWithInputVC() {
-        guard let addButton = sut.navigationItem.rightBarButtonItem else {
-            XCTFail()
-            return
-        }
-        guard let action = addButton.action else {
+        
+        XCTAssertNotNil(addButton)
+        
+        guard let action = addButton?.action else {
             XCTFail()
             return
         }
         
-        UIApplication.shared.keyWindow?.rootViewController = sut
         
         sut.performSelector(onMainThread: action, with: addButton, waitUntilDone: true)
         
