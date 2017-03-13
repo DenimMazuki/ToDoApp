@@ -10,6 +10,7 @@ import Foundation
 
 enum WebserviceError: Error {
     case DataEmptyError
+    case ResponseError
 }
 
 class APIClient {
@@ -35,6 +36,11 @@ class APIClient {
         
         session.dataTask(with: url) {
             (data, response, error) in
+            
+            guard error == nil else {
+                completion(nil, error)
+                return
+            }
             
             guard let data = data else {
                 completion(nil, WebserviceError.DataEmptyError)
