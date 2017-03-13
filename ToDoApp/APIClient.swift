@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum WebserviceError: Error {
+    case DataEmptyError
+}
+
 class APIClient {
     lazy var session: SessionProtocol = URLSession.shared
     
@@ -33,6 +37,7 @@ class APIClient {
             (data, response, error) in
             
             guard let data = data else {
+                completion(nil, WebserviceError.DataEmptyError)
                 return
             }
             
