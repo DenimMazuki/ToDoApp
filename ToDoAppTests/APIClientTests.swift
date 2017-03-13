@@ -45,17 +45,14 @@ class APIClientTests: XCTestCase {
         XCTAssertEqual(urlComponents?.host, "awesometodos.com")
         XCTAssertEqual(urlComponents?.path, "/login")
         
-        let allowedCharacters = CharacterSet(charactersIn: "/%&=?$#+-~@<>|\\*,.()[]{}^!").inverted
         
-        guard let expectedUsername = "dasdöm".addingPercentEncoding(withAllowedCharacters: allowedCharacters) else {
-            fatalError()
-        }
+        let firstQuery = URLQueryItem(name: "username", value: "dasdöm")
+        let secondQuery = URLQueryItem(name: "password", value: "%&34")
+        var expectedComponents = URLComponents()
         
-        guard let expectedPassword = "%&34".addingPercentEncoding(withAllowedCharacters: allowedCharacters) else {
-            fatalError()
-        }
+        expectedComponents.queryItems = [firstQuery, secondQuery]
         
-        XCTAssertEqual(urlComponents?.percentEncodedQuery, "username=\(expectedUsername)&password=\(expectedPassword)")
+        XCTAssertEqual((urlComponents?.queryItems)!, expectedComponents.queryItems!)
         
     }
     
