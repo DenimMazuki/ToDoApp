@@ -91,4 +91,34 @@ class ItemListViewControllerTest: XCTestCase {
         XCTAssertTrue(sut.itemManager === sut.dataProvider.itemManager)
     }
     
+    func test_ViewWillAppear_ReloadsTableView() {
+        
+        let dataSource = ItemListDataProvider()
+        dataSource.itemManager = ItemManager()
+        
+        let mockListVC = MockListViewController()
+        mockListVC.tableView = sut.tableView
+        mockListVC.tableView.dataSource = sut.tableView.dataSource
+        mockListVC.dataProvider = sut.dataProvider
+        
+        mockListVC.beginAppearanceTransition(true, animated: true)
+        mockListVC.endAppearanceTransition()
+        
+        XCTAssertTrue(mockListVC.didReload)
+    }
+    
+}
+
+extension ItemListViewControllerTest {
+    
+    class MockListViewController: ItemListViewController {
+        var didReload = false
+        
+        override func viewWillAppear(_ animated: Bool) {
+            didReload = true
+            return super.viewWillAppear(animated)
+        }
+        
+    }
+    
 }

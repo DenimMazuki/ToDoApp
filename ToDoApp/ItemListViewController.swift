@@ -12,7 +12,7 @@ class ItemListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet var dataProvider: (UITableViewDataSource & UITableViewDelegate & ItemManagerSettable)!
+    @IBOutlet var dataProvider: (UITableViewDelegate & UITableViewDataSource & ItemManagerSettable)!
     
     let itemManager = ItemManager()
     
@@ -20,6 +20,12 @@ class ItemListViewController: UIViewController {
         tableView.dataSource = dataProvider
         
         dataProvider.itemManager = itemManager
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
     }
     
     @IBAction func addItem(_ sender: UIBarButtonItem) {
