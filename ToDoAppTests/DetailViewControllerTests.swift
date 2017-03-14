@@ -25,7 +25,9 @@ class DetailViewControllerTests: XCTestCase {
     }
     
     override func tearDown() {
-
+        
+        sut.itemInfo?.0.removeAll()
+        
         super.tearDown()
     }
     
