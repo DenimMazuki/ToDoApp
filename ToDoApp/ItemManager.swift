@@ -37,8 +37,9 @@ class ItemManager: NSObject {
             fatalError()
         }
         
-        return documentURL.appendingPathComponent("doneItems.plist")
+        return documentURL.appendingPathComponent("done.plist")
     }
+    
     
     override init() {
         super.init()
@@ -63,8 +64,10 @@ class ItemManager: NSObject {
                 if let doneItem = ToDoItem(dict: dict as! [String:Any]) {
                     doneItems.append(doneItem)
                 }
+                
             }
         }
+        
     }
     
     deinit {
@@ -103,21 +106,12 @@ class ItemManager: NSObject {
     
     
     func save() {
+        
         let nsToDoItems = toDoItems.map{ $0.plistDict
         }
         
-        let nsDoneItems = doneItems.map {
+        let nsDoneItems = doneItems.map{
             $0.plistDict
-        }
-        
-        guard nsToDoItems.count > 0 else {
-            try? FileManager.default.removeItem(at: toDoPathURL)
-            return
-        }
-        
-        guard nsDoneItems.count > 0 else {
-            try? FileManager.default.removeItem(at: donePathURL)
-            return
         }
         
         

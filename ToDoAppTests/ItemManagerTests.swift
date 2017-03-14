@@ -66,7 +66,7 @@ class ItemManagerTests: XCTestCase {
     }
     
     func test_CheckItemAt_RemoveItFromToDoItems() {
-        let first = ToDoItem(title: "First")
+        let first = ToDoItem(title: "boo")
         let second = ToDoItem(title: "Second")
         sut.add(first)
         sut.add(second)
@@ -110,7 +110,7 @@ class ItemManagerTests: XCTestCase {
     func test_ToDoItemsGetSerialized() {
         var itemManager: ItemManager? = ItemManager()
         
-        let firstItem = ToDoItem(title: "First")
+        let firstItem = ToDoItem(title: "BLEH")
         itemManager?.add(firstItem)
         
         let secondItem = ToDoItem(title: "Second")
@@ -130,6 +130,7 @@ class ItemManagerTests: XCTestCase {
     
     func test_DoneItemsGetSerialized() {
         var itemManager: ItemManager? = ItemManager()
+        XCTAssertEqual(itemManager?.doneCount, 0)
         
         let firstItem = ToDoItem(title: "First")
         itemManager?.add(firstItem)
@@ -139,19 +140,19 @@ class ItemManagerTests: XCTestCase {
         
         itemManager?.checkItem(at: 0)
         itemManager?.checkItem(at: 0)
-        
+
         XCTAssertEqual(itemManager?.doneCount, 2)
-        
+
         NotificationCenter.default.post(name: .UIApplicationWillResignActive, object: nil)
         
         itemManager = nil
-        
+
         XCTAssertNil(itemManager)
-        
+
         itemManager = ItemManager()
         XCTAssertEqual(itemManager?.doneCount, 2)
-//        XCTAssertEqual(itemManager?.doneItem(at: 0), firstItem)
-//        XCTAssertEqual(itemManager?.doneItem(at: 1), secondItem)
+        XCTAssertEqual(itemManager?.doneItem(at: 0), firstItem)
+        XCTAssertEqual(itemManager?.doneItem(at: 1), secondItem)
     }
     
     
