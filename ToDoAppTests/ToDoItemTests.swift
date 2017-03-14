@@ -85,7 +85,7 @@ class ToDoItemTests: XCTestCase {
         XCTAssertNotNil(dictionary)
     }
     
-    func xtest_CanBeCreatedFromPlistDictionary() {
+    func test_CanBeCreatedFromPlistDictionary() {
         let location = Location(name: "Bar")
         let item = ToDoItem(title: "Foo", itemDescription: "Baz", timestamp: 1.0, location: location)
         
