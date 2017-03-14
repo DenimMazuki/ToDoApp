@@ -23,6 +23,10 @@ struct ToDoItem: Equatable {
         self.timestamp = timestamp
         self.location = location
     }
+    
+    init?(dict: [String:Any]) {
+        return nil
+    }
 }
 
 func ==(lhs: ToDoItem, rhs: ToDoItem) -> Bool {

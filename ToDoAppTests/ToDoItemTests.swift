@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import ToDoApp
+import CoreLocation
 
 class ToDoItemTests: XCTestCase {
     
@@ -84,4 +85,24 @@ class ToDoItemTests: XCTestCase {
         XCTAssertNotNil(dictionary)
     }
     
+    func xtest_CanBeCreatedFromPlistDictionary() {
+        let location = Location(name: "Bar")
+        let item = ToDoItem(title: "Foo", itemDescription: "Baz", timestamp: 1.0, location: location)
+        
+        let dict = item.plistDict
+        let recreatedItem = ToDoItem(dict: dict)
+        
+        XCTAssertEqual(item, recreatedItem)
+    }
+    
+    func test_CanBeSerializedAndDeserialized() {
+        let location = Location(name: "Home", coordinate: CLLocationCoordinate2DMake(50.0, 6.0))
+        
+        let dict = location.plistDict
+        XCTAssertNotNil(dict)
+        
+        let recreatedLocation = Location(dict: dict)
+        
+        XCTAssertEqual(location, recreatedLocation)
+    }
 }
